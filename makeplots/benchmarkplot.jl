@@ -2,13 +2,16 @@ using DataFrames
 using Gadfly
 
 function makebenchmarkplot()
+
     # Load benchmark data from file
     benchmarks = readtable("makeplots/benchmarks.csv", header=false, names=[:language, :benchmark, :time])
 
     # Capitalize and decorate language names from datafile
-    dict = Dict("c"=>"C", "julia"=>"Julia", "lua"=>"LuaJIT", "fortran"=>"Fortran", "java"=>"Java",
-                "javascript"=>"JavaScript", "matlab"=>"Matlab", "mathematica"=>"Mathematica", 
-                "python"=>"Python", "octave"=>"Octave", "r"=>"R", "go"=>"Go")
+    dict = Dict("c"=>"C", "julia"=>"Julia", "lua"=>"LuaJIT", 
+                "fortran"=>"Fortran", "java"=>"Java",
+                "javascript"=>"JavaScript", "matlab"=>"Matlab", 
+                "mathematica"=>"Mathe-\nmatica", "python"=>"Python", 
+                "octave"=>"Octave", "r"=>"R", "go"=>"Go")
 
     benchmarks[:language] = [dict[lang] for lang in benchmarks[:language]]
 
@@ -60,6 +63,15 @@ function makebenchmarkplot()
                    ),
     )
     draw(SVG(8inch,8inch/golden), p)
+    
+    # Mathematica has a newline so it fits as a label in the plot.
+    # Remove it for the text list of languages and geometric means.
+    for i in 1:length(langs)
+      if langs[i] == "Mathe-\nmatica"
+          langs[i] = "Mathematica"
+          break
+      end
+    end
 
     means, langs
 end
