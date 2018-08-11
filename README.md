@@ -16,33 +16,31 @@ As a result, Julia is competitive with Matlab for interactive exploration and wi
 This talk is largely live demos of Julia's innovative features, plus a benchmark of Julia against C, C++, Fortran, Matlab, and Python on a spectral time-stepping algorithm for a 1d nonlinear partial differential equation.
 The Julia PDE code is nearly as compact as Matlab and nearly as fast as Fortran.
 
-## The talk
-
-  [Why Julia?](1-whyjulia.ipynb)
+## The talk: [Julia, the future of scientific computing](1-whyjulia.ipynb)
 
 ## Outline
 
   1. Julia: easy as Matlab
-    - linear algebra (Ax=b)
-    - ordinary differential equations (Lorenz)
+     * linear algebra (Ax=b)
+     * ordinary differential equations (Lorenz)
   2. Julia: fast as Fortran
-    - partial differential equations (Kuramoto-Sivanshinksy)
-    - performance and line count comparison (Python, Matlab, Julia, C, C++, Fortran)
+     * partial differential equations (Kuramoto-Sivanshinksy)
+     * performance and line count comparison (Python, Matlab, Julia, C, C++, Fortran)
   3. Julia: easy, dynamic, and fast. How?
-    - just-in-time compilation (iterated logistic map)
-    - type inference
+     * just-in-time compilation (iterated logistic map)
+     * type inference
   4. Julia: flexible as Python
-    - comprehensive numeric types
-    - high-precision math (singular values of Hilbert matrix)
-    - user-defined types (linear algebra over Galois field)
+     * comprehensive numeric types
+     * high-precision math (singular values of Hilbert matrix)
+     * user-defined types (linear algebra over Galois field)
   5 Julia: deep as Lisp
-    - expressions: code as data
-    - macros: code that transforms code
+     * expressions: code as data
+     * macros: code that transforms code
   6. Parallelism
-    - remote procedure calls
-    - parallel loops
-    - shared arrays
-    - distributed arrays
+     * remote procedure calls
+     * parallel loops
+     * shared arrays
+     * distributed arrays
 
 ## Acknowledgments
 
