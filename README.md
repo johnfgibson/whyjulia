@@ -3,6 +3,7 @@
 Julia is the future of scientific computing.
 This talk is my effort to show why, and to convince people it's worth the time and effort to switch from other languages such as Matlab, Python, C, C++, and Fortran.
 In particular, I think we should stop teaching those languages to undergraduate scientists and engineers, and start teaching them Julia.
+This talk is aimed at people with experience in linear algebra, ordinary and partial differential equations. Comparisons are made to the languages mentioned above. 
 
 ## Abstract
 
@@ -17,12 +18,31 @@ The Julia PDE code is nearly as compact as Matlab and nearly as fast as Fortran.
 
 ## The talk
 
-  1. [Introduction](1-introduction.ipynb)
-  2. [Interactive numerics like Matlab](2-numeric-like-matlab.ipynb)
-  3. [As fast as C or Fortran (1d PDE simulation)](3-fast-as-C.ipynb)
-  4. [Just-in-time compilation](4-just-in-time-compilation.ipynb)
-  5. [Julia goes beyond](5-julia-goes-beyond.ipynb)
-  6. [Conclusions](6-conclusions.ipynb)
+  [Why Julia?](1-whyjulia.ipynb)
+
+## Outline
+
+  1. Julia: easy as Matlab
+    - linear algebra (Ax=b)
+    - ordinary differential equations (Lorenz)
+  2. Julia: fast as Fortran
+    - partial differential equations (Kuramoto-Sivanshinksy)
+    - performance and line count comparison (Python, Matlab, Julia, C, C++, Fortran)
+  3. Julia: easy, dynamic, and fast. How?
+    - just-in-time compilation (iterated logistic map)
+    - type inference
+  4. Julia: flexible as Python
+    - comprehensive numeric types
+    - high-precision math (singular values of Hilbert matrix)
+    - user-defined types (linear algebra over Galois field)
+  5 Julia: deep as Lisp
+    - expressions: code as data
+    - macros: code that transforms code
+  6. Parallelism
+    - remote procedure calls
+    - parallel loops
+    - shared arrays
+    - distributed arrays
 
 ## Acknowledgments
 
