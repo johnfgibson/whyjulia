@@ -33,7 +33,7 @@ The Julia PDE code is nearly as compact as Matlab and nearly as fast as Fortran.
      * comprehensive numeric types
      * high-precision math (singular values of Hilbert matrix)
      * user-defined types (linear algebra over Galois field)
-  5 Julia: deep as Lisp
+  5. Julia: deep as Lisp
      * expressions: code as data
      * macros: code that transforms code
   6. Parallelism
